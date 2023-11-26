@@ -1,0 +1,21 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+const dialog = ref(false)
+</script>
+
+<template>
+  <div class="text-center">
+    <v-btn class="w-100" color="secondary" flat @click="dialog = true">Open Dialog</v-btn>
+    <v-dialog v-model="dialog">
+      <v-card>
+        <v-card-text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </v-card-text>
+        <v-card-actions>
+          <v-btn block color="secondary" flat @click="dialog = false">Close Dialog</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </div>
+</template>
